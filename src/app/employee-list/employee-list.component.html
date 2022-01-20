@@ -1,0 +1,30 @@
+ <h2 class="text-center">Employee list</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Email_Id</th>
+      <th>State</th>
+      <th>City</th>
+      <th>Pincode</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ="let employee of employeeslist">
+        <td>{{employee.firstName}} </td> 
+        <td>{{employee.lastName}} </td> 
+        <td>{{employee.emailId}} </td>
+        <td>{{employee.state}} </td>
+        <td>{{employee.city}} </td>
+        <td>{{employee.pincode}} </td>
+        <div class="btn-toolbar">
+        <td>
+          <button (click)="updateEmployee(employee.id)" class=" btn btn-info">update</button>
+          <button (click)="deleteEmployee(employee.id)" class=" btn btn-danger">delete</button>
+        </td>
+        </div>
+      </tr>
+    </tbody>
+</table>
